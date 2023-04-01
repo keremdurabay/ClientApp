@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "ClientApp", "ClientApp.esproj", "{975B5FFC-CD1D-4A8C-90E2-EC8C4216B29A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{975B5FFC-CD1D-4A8C-90E2-EC8C4216B29A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{975B5FFC-CD1D-4A8C-90E2-EC8C4216B29A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{975B5FFC-CD1D-4A8C-90E2-EC8C4216B29A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{975B5FFC-CD1D-4A8C-90E2-EC8C4216B29A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{975B5FFC-CD1D-4A8C-90E2-EC8C4216B29A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{975B5FFC-CD1D-4A8C-90E2-EC8C4216B29A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23D50D5C-BEAC-4ACC-A3DC-0819D13EBDC9}
+	EndGlobalSection
+EndGlobal
