@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { UsersTableComponent } from './components/users-table/users-table.component';
 import { UserService } from './services/user.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { UserService } from './services/user.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
