@@ -29,8 +29,8 @@
             <td>{{user.surname}}</td>
             <td>{{user.fullName}}</td>
             <td>
-              <a (click)="Update(user.id)" href="#" class="settings" title="Settings" data-toggle="tooltip" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="material-icons">&#xE8B8;</i></a>
-              <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
+              <a (click)="GetById(user.id)" href="#" class="settings" title="Settings" data-toggle="tooltip" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="material-icons">&#xE8B8;</i></a>
+              <a (click)="Delete(user.id)" href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
             </td>
           </tr>
         </tbody>
@@ -60,7 +60,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button [disabled]="UserForm.invalid" data-bs-dismiss="modal" type="submit" (click)="Update()" class="btn btn-primary">Save changes</button>
           </div>
         </form>
       </div>
