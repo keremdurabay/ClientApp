@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IUser } from '../Models/IUser';
 import { environment} from '../../environments/environment';
+import { async } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -17,11 +18,15 @@ export class UserService {
     return await this.http.get<IUser>(environment.ApiUrl + "/User/GetById/" + id).toPromise()
   }
 
-  async Update(data: any): Promise<number> {
-    return this.http.put<number>(environment.ApiUrl+"/User/Update",data).toPromise()
+  async Update(data: any): Promise<any> {
+    return await this.http.put<any>(environment.ApiUrl+"/User/Update",data).toPromise()
   }
 
-  async Delete(id: number): Promise<number> {
-    return this.http.delete<number>(environment.ApiUrl + "/User/Delete/"+id).toPromise()
+  async Delete(id: number): Promise<any> {
+    return await this.http.delete<any>(environment.ApiUrl + "/User/Delete/"+id).toPromise()
+  }
+
+  async Add(data: any): Promise<any> {
+    return await this.http.post<any>(environment.ApiUrl +"/User/Create",data).toPromise()
   }
 }

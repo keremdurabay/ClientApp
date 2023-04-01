@@ -18,6 +18,13 @@ export class UsersTableComponent implements OnInit {
   fullName:new FormControl("")
   })
 
+  UserAddForm = new FormGroup({
+
+    name: new FormControl("", Validators.required),
+    surname: new FormControl("", Validators.required),
+
+  })
+
 
   users:IUser[]
   constructor(private userService: UserService) { }
@@ -44,5 +51,10 @@ export class UsersTableComponent implements OnInit {
       await this.userService.Delete(id)
       await this.GetAll()
     }
+  }
+
+  async Add(): Promise<void> {
+    await this.userService.Add(this.UserAddForm.value)
+    await this.GetAll()
   }
 }
